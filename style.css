@@ -24,7 +24,8 @@
   font-weight: bold;
   font-size: 16px;
   display: grid;  
-  grid-template-rows: repeat(12, 1fr); 
+  grid-template-rows: repeat(12, 1fr);
+  gap: 5px;
 }
 
 .sidebar li {
@@ -40,13 +41,72 @@
   width: 16px;
 }
 
-.sidebar .item1>img {
-  height: 30px;
-  width: 30px;
+.sidebar .item1 {
+  font-size: 24px;
 }
 
-/* .header {  
-} */
+.sidebar .item1>img {
+  height: 36px;
+  width: 36px;
+}
+
+.header {
+  display: grid;
+  gap: 20px;
+}
+
+.header div {
+  padding: 0;
+}
+
+.header-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 100px; 
+}
+
+.header-top-left {
+  display: grid;
+  grid-template-columns: 1fr 10fr;  
+  align-items: center;
+  gap: 5px;
+}
+
+.header-top-left img {
+  justify-self: center;
+}
+
+#search {
+  background-color: hsl(214deg 32% 91%);  
+  border: none;
+  height: 22px;
+  border-radius: 10px;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.header-top-right {
+  display: grid;
+  grid-template-columns: min-content min-content 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-top-right .image-profile {
+  width: 34px;
+  height: 34px;
+}
+
+.header-top-right .name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.header .icon {
+  width: 18px;
+  height: 18px;
+}
+
 
 .content {
   background-color: gray;
