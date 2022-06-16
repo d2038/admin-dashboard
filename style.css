@@ -30,7 +30,7 @@
 
 .sidebar li {
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 24px 1fr;
   gap: 10px;
   align-items: center;
 }
@@ -105,6 +105,52 @@
 .header .icon {
   width: 18px;
   height: 18px;
+}
+
+.header-bottom {
+  display: grid;  
+  grid-template-columns: 1.8fr 1fr 20px;
+  gap: 20px;
+}
+
+.header-bottom-left {
+  display: grid;
+  grid-template: 1fr 2fr / 1fr 5fr;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.header-bottom-left img {
+  width: 52px;
+  height: 52px;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  justify-self: center;
+}
+
+.header .greet {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.header .name-big {
+  font-weight: bold;
+}
+
+.header-bottom-right {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(60px, 1fr));
+  gap: 25px;
+  align-items: center;
+}
+
+.header .btn {  
+  padding: 8px 0;
+  background-color: hsl(201deg 79% 46%);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
 }
 
 
