@@ -4,18 +4,15 @@
 }
 
 .container {  
-  display: grid;
-  grid-template-columns: 1fr 4fr;  
-}
-
-.container div {
-  padding: 15px;  
-  font-family: Helvetica;  
+  display: grid;  
+  grid-template-columns: 1fr 4.5fr;
+  grid-template-rows: minmax(1fr, 150px) 1fr;
 }
 
 .sidebar {
   background-color: hsl(201deg 79% 46%);
   grid-row: 1 / 3;
+  padding: 15px;
 }
 
 .sidebar-items {
@@ -53,10 +50,7 @@
 .header {
   display: grid;
   gap: 20px;
-}
-
-.header div {
-  padding: 0;
+  padding: 15px;
 }
 
 .header-top {
@@ -92,9 +86,10 @@
   gap: 20px;
 }
 
-.header-top-right .image-profile {
-  width: 34px;
-  height: 34px;
+.header-top-right .image-profile,
+.trending img {
+  width: 36px;
+  height: 36px;
 }
 
 .header-top-right .name {
@@ -115,9 +110,8 @@
 
 .header-bottom-left {
   display: grid;
-  grid-template: 1fr 2fr / 1fr 5fr;
-  align-items: center;
-  column-gap: 10px;
+  grid-template: 1fr 1.3fr / 1fr 5fr;  
+  gap: 3px;
 }
 
 .header-bottom-left img {
@@ -125,15 +119,16 @@
   height: 52px;
   grid-column: 1;
   grid-row: 1 / 3;
-  justify-self: center;
+  place-self: center;  
 }
 
 .header .greet {
   font-weight: bold;
   font-size: 11px;
+  align-self: end;
 }
 
-.header .name-big {
+.header .name-big {  
   font-weight: bold;
 }
 
@@ -153,7 +148,63 @@
   border-radius: 15px;
 }
 
-
 .content {
-  background-color: gray;
+  background-color: hsl(214deg 32% 91%);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 25px 20px 25px 15px;
+  column-gap: 15px;
+  row-gap: 20px;
+}
+
+.content .projects {
+  grid-row: 1 / 3;
+}
+
+.announcements,
+.trending {
+  display: grid;
+  gap: 10px;
+}
+
+.content .title,
+.announcements .info-title,
+.trending .username {
+  font-weight: bold;
+}
+
+.announcements .info-title {
+  font-size: 12px;
+}
+
+.content .side-card {
+  display: grid;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.announcements .side-card {
+  font-size: 11px;
+  gap: 10px;  
+}
+
+.announcements .side-card>div {
+  padding: 0 5px;
+}
+
+.trending .side-card>div {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  font-size: 12px;
+  column-gap: 12px;
+}
+
+.trending .side-card img {
+  grid-row: 1 / 3;
+}
+
+.trending .side-card {
+  row-gap: 20px;  
 }
