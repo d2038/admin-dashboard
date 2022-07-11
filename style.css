@@ -157,7 +157,7 @@
   row-gap: 20px;
 }
 
-.content .projects {
+.content .main-content {
   grid-row: 1 / 3;
 }
 
@@ -182,6 +182,7 @@
   background-color: white;
   border-radius: 5px;
   padding: 20px;
+  height: max-content;
 }
 
 .announcements .side-card {
